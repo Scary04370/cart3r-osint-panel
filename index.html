@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080914">
+<title>CART3R // OSINT COMMAND</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="ambient a1"></div><div class="ambient a2"></div>
+<div class="app">
+<aside class="sidebar">
+  <div class="brand"><div class="brandicon">C<span>.</span></div><div><b>CART3R</b><small>OSINT COMMAND</small></div></div>
+  <div class="sidecap">WORKSPACE</div>
+  <button class="nav active" data-page="home"><i>⌂</i> Dashboard</button>
+  <button class="nav" data-page="discord"><i>◉</i> Discord decoder</button>
+  <button class="nav" data-page="osint"><i>⌕</i> Public OSINT</button>
+  <button class="nav" data-page="api"><i>⌘</i> API vault</button>
+  <button class="nav" data-page="lab"><i>⬡</i> Security lab</button>
+  <div class="sidebottom"><span class="pulse"></span> LOCAL MODE <small>V2.0.1</small></div>
+</aside>
+<main>
+<header><div><div class="crumb">CART3R / <span id="crumb">OVERVIEW</span></div><h1 id="title">Command center</h1></div><div class="live"><span></span> SYSTEM ONLINE</div></header>
+<section id="home" class="page active">
+  <div class="hero"><div class="hero-copy"><div class="overline">PRIVATE WORKSPACE · BUILD 02</div><h2>Think deeper.<br><em>Stay secure.</em></h2><p>Un espace de recherche publique et de gestion de tes propres projets API.</p><button class="cta" data-target="discord">Ouvrir Discord tools <b>↗</b></button></div><div class="orb"><div class="orbcore">C<span>3</span></div><div class="orbit o1"></div><div class="orbit o2"></div></div><div class="hero-grid"></div></div>
+  <div class="stats"><div class="stat"><small>MODULES</small><b>05</b><span>Opérationnels</span></div><div class="stat"><small>MODE</small><b>LOCAL</b><span>Aucune télémétrie</span></div><div class="stat"><small>DONNÉES</small><b>PRIVÉES</b><span>Stockage navigateur</span></div></div>
+  <div class="sectiontop"><div><div class="overline">NAVIGATION</div><h3>Modules disponibles</h3></div><span class="pill">ALL SYSTEMS READY</span></div>
+  <div class="modulegrid">
+    <button class="module" data-target="discord"><span class="moduleicon purple">◉</span><b>Discord decoder</b><small>Décoder la date d'un ID Snowflake</small><span class="arrow">↗</span></button>
+    <button class="module" data-target="osint"><span class="moduleicon blue">⌕</span><b>Public OSINT</b><small>Rechercher des informations publiques</small><span class="arrow">↗</span></button>
+    <button class="module" data-target="api"><span class="moduleicon pink">⌘</span><b>API vault</b><small>Cataloguer tes propres endpoints</small><span class="arrow">↗</span></button>
+    <button class="module" data-target="lab"><span class="moduleicon green">⬡</span><b>Security lab</b><small>Checklist de sécurité API</small><span class="arrow">↗</span></button>
+  </div>
+  <div class="warning"><b>⚠ Utilisation responsable</b><span>Recherche uniquement des informations publiques et travaille sur tes propres comptes et systèmes. Pas de doxxing, de vol de tokens ou d'accès non autorisé.</span></div>
+</section>
+
+<section id="discord" class="page">
+ <div class="pageintro"><div class="overline">MODULE 01 / DISCORD</div><h2>Snowflake <em>decoder</em></h2><p>Entre un identifiant Discord pour calculer sa date de création approximative. Le calcul est effectué directement dans ton navigateur.</p></div>
+ <div class="panel">
+  <div class="paneltitle"><div><span class="moduleicon purple">◉</span><b>IDENTIFIER ANALYSIS</b></div><span class="pill">OFFLINE TOOL</span></div>
+  <label for="snowflake">DISCORD USER / SERVER / MESSAGE ID</label>
+  <div class="inputrow"><input id="snowflake" inputmode="numeric" autocomplete="off" placeholder="Ex. 123456789012345678"><button id="decode" class="primary">DÉCODER <b>→</b></button></div>
+  <div id="snowResult" class="result empty"><span class="resultdot"></span><div><b>En attente d'un identifiant</b><small>Entre un Snowflake valide puis appuie sur Décoder.</small></div></div>
+  <div class="infobox">ⓘ Un Snowflake permet d'estimer une date de création. Il ne révèle pas le nom réel, l'adresse IP, l'adresse personnelle ou les messages privés du propriétaire.</div>
+ </div>
+</section>
+
+<section id="osint" class="page">
+ <div class="pageintro"><div class="overline">MODULE 02 / OPEN SOURCES</div><h2>Public <em>OSINT</em></h2><p>Prépare des recherches sur des informations volontairement accessibles au public.</p></div>
+ <div class="panel">
+  <div class="paneltitle"><div><span class="moduleicon blue">⌕</span><b>PUBLIC SEARCH</b></div><span class="pill">WEB LINKS</span></div>
+  <label for="handle">PSEUDO PUBLIC</label><input id="handle" placeholder="Ex. pseudo_public">
+  <div class="btnrow"><button class="primary" id="webSearch">RECHERCHE WEB ↗</button><button class="secondary" id="gitSearch">GITHUB ↗</button></div>
+  <label for="domain">DOMAINE PUBLIC</label><input id="domain" placeholder="Ex. exemple.fr">
+  <button class="secondary full" id="domainSearch">RECHERCHER LES PAGES PUBLIQUES ↗</button>
+  <div class="infobox">Les résultats viennent des moteurs de recherche publics. Un pseudo peut être partagé par plusieurs personnes : ne l'utilise pas pour tenter d'identifier ou localiser quelqu'un.</div>
+ </div>
+</section>
+
+<section id="api" class="page">
+ <div class="pageintro"><div class="overline">MODULE 03 / DEVELOPMENT</div><h2>API <em>vault</em></h2><p>Un catalogue local pour documenter les API que tu développes ou que tu es autorisé à utiliser.</p></div>
+ <div class="panel">
+  <div class="paneltitle"><div><span class="moduleicon pink">⌘</span><b>NEW API PROJECT</b></div><span class="pill">LOCAL STORAGE</span></div>
+  <label for="apiName">NOM DU PROJET</label><input id="apiName" placeholder="Mon API">
+  <label for="apiUrl">URL DE BASE</label><input id="apiUrl" placeholder="https://api.mondomaine.fr">
+  <label for="apiDesc">DESCRIPTION</label><textarea id="apiDesc" placeholder="Description de ton projet..."></textarea>
+  <button class="primary full" id="saveApi">+ AJOUTER AU CATALOGUE</button>
+  <div class="sectiontop compact"><h3>Mes projets</h3><span class="pill" id="apiCount">0 PROJET</span></div>
+  <div id="apiList" class="apiList"><div class="emptylist">Aucun projet enregistré pour le moment.</div></div>
+  <div class="infobox danger">Ne stocke jamais de mot de passe, token ou clé secrète dans ce catalogue. Il n'est pas conçu comme un coffre-fort.</div>
+ </div>
+</section>
+
+<section id="lab" class="page">
+ <div class="pageintro"><div class="overline">MODULE 04 / DEFENSE</div><h2>Security <em>lab</em></h2><p>Checklist de sécurité pour tes propres applications et API.</p></div>
+ <div class="panel">
+  <div class="paneltitle"><div><span class="moduleicon green">⬡</span><b>API HARDENING CHECKLIST</b></div><span class="pill">MANUAL REVIEW</span></div>
+  <div class="checks">
+   <label><input type="checkbox"> <span><b>HTTPS activé</b><small>Chiffrement du trafic en production.</small></span></label>
+   <label><input type="checkbox"> <span><b>Secrets côté serveur</b><small>Variables d'environnement, jamais dans le code client.</small></span></label>
+   <label><input type="checkbox"> <span><b>Authentification vérifiée</b><small>Chaque route privée contrôle l'utilisateur.</small></span></label>
+   <label><input type="checkbox"> <span><b>Validation des entrées</b><small>Les données reçues sont vérifiées côté serveur.</small></span></label>
+   <label><input type="checkbox"> <span><b>Limitation de débit</b><small>Protection contre les requêtes abusives.</small></span></label>
+   <label><input type="checkbox"> <span><b>Journaux propres</b><small>Aucun mot de passe ni token dans les logs.</small></span></label>
+   <label><input type="checkbox"> <span><b>Dépendances à jour</b><small>Librairies et frameworks maintenus.</small></span></label>
+  </div>
+  <div class="infobox">Cette checklist est un aide-mémoire, pas un audit automatique ni une certification de sécurité.</div>
+ </div>
+</section>
+<footer><span>CART3R // OSINT COMMAND</span><span>BUILT FOR RESPONSIBLE RESEARCH</span></footer>
+</main>
+</div>
+<script src="app.js"></script>
+</body></html>
